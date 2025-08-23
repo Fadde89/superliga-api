@@ -25,8 +25,9 @@ jobs:
         run: node fetch_table.js
 
       - name: Commit and push changes
-        uses: ad-m/github-push-action@v0.6.0
+        uses: EndBug/add-and-commit@v9
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          branch: main
-          force: true
+          author_name: github-actions
+          author_email: github-actions@github.com
+          message: 'Update superliga_table.json'
+          push: true
