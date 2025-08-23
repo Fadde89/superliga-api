@@ -1,0 +1,19 @@
+name: Deploy JSON to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Deploy static files to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@5.0.1
+        with:
+          branch: gh-pages
+          folder: .
