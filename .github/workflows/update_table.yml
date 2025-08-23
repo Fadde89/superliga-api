@@ -3,7 +3,7 @@ name: Update Superliga Table
 on:
   workflow_dispatch: # körs manuellt
   schedule:
-    - cron: '0 0 * * *' # körs varje natt kl 00:00 UTC
+    - cron: '*/5 * * * *' # kör var 5:e minut
 
 jobs:
   update-json:
