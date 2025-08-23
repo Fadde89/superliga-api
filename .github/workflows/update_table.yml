@@ -1,34 +1,30 @@
 name: Update Superliga Table
 
 on:
+  workflow_dispatch: # körs manuellt
   schedule:
-    - cron: '0 * * * *' # kör varje timme
-  workflow_dispatch:
+    - cron: '0 0 * * *' # körs varje natt kl 00:00 UTC
 
 jobs:
   update-json:
     runs-on: ubuntu-latest
+
     steps:
-      # 1️⃣ Checkout repo
-      - name: Checkout repo
+      - name: Checkout repository
         uses: actions/checkout@v3
 
-      # 2️⃣ Setup Node.js
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
           node-version: '20'
 
-      # 3️⃣ Install dependencies
       - name: Install dependencies
         run: npm install axios cheerio
 
-      # 4️⃣ Run fetch script
-      - name: Run fetch script
+      - name: Fetch table
         run: node fetch_table.js
 
-      # 5️⃣ Commit & push using GitHub token
-      - name: Push changes
+      - name: Commit and push changes
         uses: ad-m/github-push-action@v0.6.0
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
