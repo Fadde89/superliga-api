@@ -27,7 +27,7 @@ jobs:
       - name: Run fetch script
         run: node fetch_table.js
 
-      # 5️⃣ Commit och pusha JSON
+      # 5️⃣ Commit och pusha JSON med GITHUB_TOKEN
       - name: Commit updated JSON
         run: |
           git config --global user.name "GitHub Actions"
