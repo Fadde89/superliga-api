@@ -1,12 +1,12 @@
 [
   {
     "pos": "1",
-    "team": "Copenhagen",
+    "team": "F.C. København",
     "points": 13
   },
   {
     "pos": "2",
-    "team": "Brondby",
+    "team": "Brøndby IF",
     "points": 12
   },
   {
@@ -16,22 +16,22 @@
   },
   {
     "pos": "4",
-    "team": "Aarhus",
+    "team": "AGF",
     "points": 8
   },
   {
     "pos": "5",
-    "team": "Odense",
+    "team": "OB",
     "points": 8
   },
   {
     "pos": "6",
-    "team": "Fredericia",
+    "team": "FC Fredericia",
     "points": 7
   },
   {
     "pos": "7",
-    "team": "Randers",
+    "team": "Randers FC",
     "points": 7
   },
   {
@@ -41,22 +41,22 @@
   },
   {
     "pos": "9",
-    "team": "Silkeborg",
+    "team": "Silkeborg IF",
     "points": 6
   },
   {
     "pos": "10",
-    "team": "Vejle",
+    "team": "Vejle Boldklub",
     "points": 4
   },
   {
     "pos": "11",
-    "team": "SonderjyskE",
+    "team": "Sønderjyske Fodbold",
     "points": 4
   },
   {
     "pos": "12",
-    "team": "Nordsjaelland",
+    "team": "FC Nordsjælland",
     "points": 3
   }
 ]
