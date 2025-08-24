@@ -2,7 +2,7 @@
   {
     "pos": "1",
     "team": "Copenhagen",
-    "points": 12
+    "points": 13
   },
   {
     "pos": "2",
@@ -21,17 +21,17 @@
   },
   {
     "pos": "5",
+    "team": "Odense",
+    "points": 8
+  },
+  {
+    "pos": "6",
     "team": "Fredericia",
     "points": 7
   },
   {
-    "pos": "6",
-    "team": "Randers",
-    "points": 7
-  },
-  {
     "pos": "7",
-    "team": "Odense",
+    "team": "Randers",
     "points": 7
   },
   {
