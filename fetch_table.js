@@ -13,7 +13,7 @@ const TEAM_MAP = {
   "Viborg": "Viborg FF",
   "Silkeborg": "Silkeborg IF",
   "Vejle": "Vejle Boldklub",
-  "SonderjyskE": "Sønderjyske Fodbold",
+  "SonderjyskE": "Sønderjyske",
   "Nordsjaelland": "FC Nordsjælland"
 };
 
@@ -44,3 +44,4 @@ const TEAM_MAP = {
     console.error('❌ Fel vid hämtning:', err);
   }
 })();
+
