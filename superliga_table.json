@@ -21,33 +21,33 @@
   },
   {
     "pos": "5",
-    "team": "Sønderjyske",
-    "points": 10
-  },
-  {
-    "pos": "6",
     "team": "FC Fredericia",
     "points": 10
   },
   {
+    "pos": "6",
+    "team": "Sønderjyske",
+    "points": 10
+  },
+  {
     "pos": "7",
+    "team": "Randers FC",
+    "points": 10
+  },
+  {
+    "pos": "8",
     "team": "Viborg FF",
     "points": 9
   },
   {
-    "pos": "8",
+    "pos": "9",
     "team": "FC Nordsjælland",
     "points": 9
   },
   {
-    "pos": "9",
+    "pos": "10",
     "team": "OB",
     "points": 8
-  },
-  {
-    "pos": "10",
-    "team": "Randers FC",
-    "points": 7
   },
   {
     "pos": "11",
