@@ -1,18 +1,18 @@
 [
   {
     "pos": "1",
+    "team": "AGF",
+    "points": 20
+  },
+  {
+    "pos": "2",
     "team": "FC Midtjylland",
     "points": 18
   },
   {
-    "pos": "2",
-    "team": "AGF",
-    "points": 17
-  },
-  {
     "pos": "3",
     "team": "F.C. København",
-    "points": 16
+    "points": 17
   },
   {
     "pos": "4",
@@ -26,18 +26,18 @@
   },
   {
     "pos": "6",
-    "team": "FC Fredericia",
+    "team": "Sønderjyske",
     "points": 11
   },
   {
     "pos": "7",
-    "team": "OB",
+    "team": "FC Fredericia",
     "points": 11
   },
   {
     "pos": "8",
-    "team": "Sønderjyske",
-    "points": 10
+    "team": "OB",
+    "points": 11
   },
   {
     "pos": "9",
@@ -47,7 +47,7 @@
   {
     "pos": "10",
     "team": "Silkeborg IF",
-    "points": 9
+    "points": 10
   },
   {
     "pos": "11",
@@ -57,6 +57,6 @@
   {
     "pos": "12",
     "team": "Vejle Boldklub",
-    "points": 5
+    "points": 6
   }
 ]
