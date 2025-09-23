@@ -21,28 +21,28 @@
   },
   {
     "pos": "5",
+    "team": "Randers FC",
+    "points": 13
+  },
+  {
+    "pos": "6",
     "team": "FC Nordsjælland",
     "points": 12
   },
   {
-    "pos": "6",
+    "pos": "7",
     "team": "Sønderjyske",
     "points": 11
   },
   {
-    "pos": "7",
+    "pos": "8",
     "team": "FC Fredericia",
     "points": 11
   },
   {
-    "pos": "8",
+    "pos": "9",
     "team": "OB",
     "points": 11
-  },
-  {
-    "pos": "9",
-    "team": "Randers FC",
-    "points": 10
   },
   {
     "pos": "10",
