@@ -6,13 +6,13 @@
   },
   {
     "pos": "2",
-    "team": "FC Midtjylland",
-    "points": 18
+    "team": "F.C. København",
+    "points": 20
   },
   {
     "pos": "3",
-    "team": "F.C. København",
-    "points": 17
+    "team": "FC Midtjylland",
+    "points": 18
   },
   {
     "pos": "4",
@@ -31,17 +31,17 @@
   },
   {
     "pos": "7",
-    "team": "Sønderjyske",
-    "points": 11
-  },
-  {
-    "pos": "8",
     "team": "FC Fredericia",
     "points": 11
   },
   {
-    "pos": "9",
+    "pos": "8",
     "team": "OB",
+    "points": 11
+  },
+  {
+    "pos": "9",
+    "team": "Sønderjyske",
     "points": 11
   },
   {
