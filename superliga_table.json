@@ -37,21 +37,21 @@
   {
     "pos": "8",
     "team": "Sønderjyske",
-    "points": 11
+    "points": 12
   },
   {
     "pos": "9",
+    "team": "OB",
+    "points": 12
+  },
+  {
+    "pos": "10",
     "team": "FC Fredericia",
     "points": 11
   },
   {
-    "pos": "10",
-    "team": "Silkeborg IF",
-    "points": 11
-  },
-  {
     "pos": "11",
-    "team": "OB",
+    "team": "Silkeborg IF",
     "points": 11
   },
   {
