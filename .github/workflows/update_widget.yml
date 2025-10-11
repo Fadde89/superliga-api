@@ -22,7 +22,8 @@ jobs:
           node-version: '20'
 
       - name: Install dependencies
-        run: npm install axios cheerio
+        run: |
+          npm install axios cheerio node-ical
 
       - name: Fetch table
         run: node fetch_table.js
