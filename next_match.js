@@ -30,10 +30,9 @@ const fs = require('fs');
     matches.sort((a, b) => a.start - b.start);
     const nextMatch = matches[0];
 
-    // Försök parsa lag (ex: "F.C. København vs. Brøndby IF")
-    let [home, away] = nextMatch.summary.split(' vs ');
-    home = home?.trim() || 'Okänt lag';
-    away = away?.trim() || 'Okänt lag';
+    // Behåll exakt samma som tidigare
+    const home = nextMatch.summary; // All text i home
+    const away = "Okänt lag";       // Hårt satt som tidigare
 
     // Konvertera till lokal tid
     const date = new Date(nextMatch.start);
@@ -48,9 +47,9 @@ const fs = require('fs');
 
     fs.writeFileSync('next_match.json', JSON.stringify(data, null, 2));
 
+    // Exakt samma console.log som du vill ha
     console.log(`✅ Nästa match: ${home} vs ${away}`);
-    console.log(`📅 Datum/tid: ${localDate}`);
-    console.log(`📍 Plats: ${data.location}`);
+    console.log(`Datum/tid (svensk tid): ${localDate}`);
   } catch (err) {
     console.error('❌ Fel vid hämtning:', err);
   }
