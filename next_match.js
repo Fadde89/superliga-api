@@ -1,69 +1,56 @@
 const axios = require('axios');
-const cheerio = require('cheerio');
+const ical = require('node-ical');
 const fs = require('fs');
-
-const TEAM_MAP = {
-  "Copenhagen": "F.C. København",
-  "Brondby": "Brøndby IF",
-  "FC Midtjylland": "FC Midtjylland",
-  "Aarhus": "AGF",
-  "Odense": "OB",
-  "Fredericia": "FC Fredericia",
-  "Randers": "Randers FC",
-  "Viborg": "Viborg FF",
-  "Silkeborg": "Silkeborg IF",
-  "Vejle": "Vejle Boldklub",
-  "SonderjyskE": "Sønderjyske Fodbold",
-  "Nordsjaelland": "FC Nordsjælland"
-};
 
 (async () => {
   try {
-    const url = 'https://www.sportsmole.co.uk/football/copenhagen/';
-    const { data: html } = await axios.get(url);
-    const $ = cheerio.load(html);
+    const icsUrl = 'https://www.fck.dk/fck.ics';
+    const response = await axios.get(icsUrl);
+    const events = ical.sync.parseICS(response.data);
 
-    // Plocka Next Game-div
-    const nextGameDiv = $('div.next_game').first();
+    const now = new Date();
+    const matches = [];
 
-    // Hämta lag och mappa med TEAM_MAP
-    const teamsText = nextGameDiv.find('a').text().trim(); // "Home vs. Away"
-    let [home, away] = teamsText.split(' vs. ').map(s => s.trim());
-    home = TEAM_MAP[home] || home;
-    away = TEAM_MAP[away] || away;
+    for (const key in events) {
+      const ev = events[key];
+      if (ev.type === 'VEVENT' && ev.start > now) {
+        matches.push({
+          summary: ev.summary,
+          location: ev.location,
+          start: ev.start
+        });
+      }
+    }
 
-    // Hämta datumtext
-    const fullText = nextGameDiv.text().trim(); 
-    const dateText = fullText.split(' - ')[1].replace('in Danish Superliga','').trim(); // "Sunday, August 31 at 5pm"
+    if (matches.length === 0) {
+      throw new Error('Inga kommande matcher hittades i kalendern.');
+    }
 
-    // Parsar datum
-    const datePart = dateText.replace(/^\w+,\s+/, '').replace('at ', '').trim(); // "August 31 5pm"
-    const dateParts = datePart.match(/(\w+)\s+(\d+)\s+(\d+)(am|pm)/i);
+    // Sortera matcher på starttid
+    matches.sort((a, b) => a.start - b.start);
+    const nextMatch = matches[0];
 
-    const months = {
-      January:'01', February:'02', March:'03', April:'04', May:'05', June:'06',
-      July:'07', August:'08', September:'09', October:'10', November:'11', December:'12'
+    // Försök parsa lag (ex: "F.C. København vs. Brøndby IF")
+    let [home, away] = nextMatch.summary.split(' vs ');
+    home = home?.trim() || 'Okänt lag';
+    away = away?.trim() || 'Okänt lag';
+
+    // Konvertera till lokal tid
+    const date = new Date(nextMatch.start);
+    const localDate = date.toLocaleString('sv-SE', { timeZone: 'Europe/Copenhagen' });
+
+    const data = {
+      home,
+      away,
+      date: localDate,
+      location: nextMatch.location || 'Okänd plats'
     };
 
-    let hour = parseInt(dateParts[3], 10);
-    if (dateParts[4].toLowerCase() === 'pm' && hour !== 12) hour += 12;
-
-    // Lägg till 1 timme för svensk tid (BST → CEST)
-    hour += 1;
-
-    // Skapa datumsträng
-    const year = new Date().getFullYear();
-    const month = months[dateParts[1]];
-    const day = dateParts[2].padStart(2,'0');
-    const hourStr = hour.toString().padStart(2,'0');
-    const localDate = `${year}-${month}-${day} ${hourStr}:00:00`;
-
-    // Spara JSON
-    const nextMatch = { home, away, date: localDate };
-    fs.writeFileSync('next_match.json', JSON.stringify(nextMatch, null, 2));
+    fs.writeFileSync('next_match.json', JSON.stringify(data, null, 2));
 
     console.log(`✅ Nästa match: ${home} vs ${away}`);
-    console.log(`Datum/tid (svensk tid): ${localDate}`);
+    console.log(`📅 Datum/tid: ${localDate}`);
+    console.log(`📍 Plats: ${data.location}`);
   } catch (err) {
     console.error('❌ Fel vid hämtning:', err);
   }
