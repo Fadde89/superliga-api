@@ -11,12 +11,12 @@ const fs = require('fs');
     const now = new Date();
     const matches = [];
 
+    // Hämta alla kommande matcher
     for (const key in events) {
       const ev = events[key];
       if (ev.type === 'VEVENT' && ev.start > now) {
         matches.push({
           summary: ev.summary,
-          location: ev.location,
           start: ev.start
         });
       }
@@ -30,26 +30,23 @@ const fs = require('fs');
     matches.sort((a, b) => a.start - b.start);
     const nextMatch = matches[0];
 
-    // Behåll exakt samma som tidigare
-    const home = nextMatch.summary; // All text i home
-    const away = "Okänt lag";       // Hårt satt som tidigare
+    // Parsar home vs away från summary
+    let [home, away] = nextMatch.summary.split(/ - | vs /);
+    home = home?.trim();
+    away = away?.trim();
 
-    // Konvertera till lokal tid
+    // Konvertera till svensk tid
     const date = new Date(nextMatch.start);
     const localDate = date.toLocaleString('sv-SE', { timeZone: 'Europe/Copenhagen' });
 
-    const data = {
-      home,
-      away,
-      date: localDate,
-      location: nextMatch.location || 'Okänd plats'
-    };
-
+    // Spara JSON utan location
+    const data = { home, away, date: localDate };
     fs.writeFileSync('next_match.json', JSON.stringify(data, null, 2));
 
-    // Exakt samma console.log som du vill ha
+    // Console-log med emojis
     console.log(`✅ Nästa match: ${home} vs ${away}`);
-    console.log(`Datum/tid (svensk tid): ${localDate}`);
+    console.log(`📅 Datum/tid: ${localDate}`);
+
   } catch (err) {
     console.error('❌ Fel vid hämtning:', err);
   }
