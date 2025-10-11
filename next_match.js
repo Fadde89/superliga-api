@@ -33,13 +33,13 @@ const fs = require('fs');
     // Parsar home vs away från summary
     let [home, away] = nextMatch.summary.split(/ - | vs /);
     home = home?.trim();
-    away = away?.trim();
+    away = away?.replace(/\s*\(via.*\)/, '').trim(); // Tar bort (via FCK.DK)
 
     // Konvertera till svensk tid
     const date = new Date(nextMatch.start);
     const localDate = date.toLocaleString('sv-SE', { timeZone: 'Europe/Copenhagen' });
 
-    // Spara JSON utan location
+    // Spara JSON
     const data = { home, away, date: localDate };
     fs.writeFileSync('next_match.json', JSON.stringify(data, null, 2));
 
