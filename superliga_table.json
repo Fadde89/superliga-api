@@ -7,17 +7,17 @@
   {
     "pos": "2",
     "team": "FC Midtjylland",
-    "points": 25
+    "points": 28
   },
   {
     "pos": "3",
-    "team": "Brøndby IF",
+    "team": "F.C. København",
     "points": 22
   },
   {
     "pos": "4",
-    "team": "F.C. København",
-    "points": 21
+    "team": "Brøndby IF",
+    "points": 22
   },
   {
     "pos": "5",
@@ -27,27 +27,27 @@
   {
     "pos": "6",
     "team": "Randers FC",
-    "points": 16
+    "points": 17
   },
   {
     "pos": "7",
-    "team": "Sønderjyske",
-    "points": 15
+    "team": "Silkeborg IF",
+    "points": 17
   },
   {
     "pos": "8",
+    "team": "Sønderjyske",
+    "points": 16
+  },
+  {
+    "pos": "9",
     "team": "OB",
     "points": 15
   },
   {
-    "pos": "9",
-    "team": "Silkeborg IF",
-    "points": 14
-  },
-  {
     "pos": "10",
     "team": "Viborg FF",
-    "points": 12
+    "points": 13
   },
   {
     "pos": "11",
