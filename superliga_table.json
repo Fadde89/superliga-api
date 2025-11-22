@@ -1,17 +1,17 @@
 [
   {
     "pos": "1",
+    "team": "AGF",
+    "points": 34
+  },
+  {
+    "pos": "2",
     "team": "FC Midtjylland",
     "points": 32
   },
   {
-    "pos": "2",
-    "team": "Brøndby IF",
-    "points": 31
-  },
-  {
     "pos": "3",
-    "team": "AGF",
+    "team": "Brøndby IF",
     "points": 31
   },
   {
@@ -36,12 +36,12 @@
   },
   {
     "pos": "8",
-    "team": "Silkeborg IF",
+    "team": "FC Nordsjælland",
     "points": 18
   },
   {
     "pos": "9",
-    "team": "FC Nordsjælland",
+    "team": "Silkeborg IF",
     "points": 18
   },
   {
