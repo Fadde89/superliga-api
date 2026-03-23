@@ -2,7 +2,7 @@
   {
     "pos": "1",
     "team": "AGF",
-    "points": 51
+    "points": 52
   },
   {
     "pos": "8",
@@ -20,24 +20,24 @@
     "points": 29
   },
   {
+    "pos": "3",
+    "team": "Sønderjyske",
+    "points": 37
+  },
+  {
     "pos": "9",
     "team": "Randers FC",
     "points": 26
   },
   {
-    "pos": "3",
-    "team": "Sønderjyske",
-    "points": 36
+    "pos": "5",
+    "team": "Viborg FF",
+    "points": 33
   },
   {
     "pos": "6",
     "team": "Brøndby IF",
-    "points": 34
-  },
-  {
-    "pos": "6",
-    "team": "FC Nordsjælland",
-    "points": 31
+    "points": 35
   },
   {
     "pos": "10",
@@ -45,9 +45,9 @@
     "points": 24
   },
   {
-    "pos": "5",
-    "team": "Viborg FF",
-    "points": 36
+    "pos": "6",
+    "team": "FC Nordsjælland",
+    "points": 31
   },
   {
     "pos": "11",
