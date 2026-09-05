@@ -11,12 +11,12 @@
   },
   {
     "pos": "3",
-    "team": "Viborg FF",
+    "team": "FC Nordsjælland",
     "points": 13
   },
   {
     "pos": "4",
-    "team": "FC Nordsjælland",
+    "team": "Viborg FF",
     "points": 13
   },
   {
@@ -36,18 +36,18 @@
   },
   {
     "pos": "8",
+    "team": "Lyngby Boldklub",
+    "points": 6
+  },
+  {
+    "pos": "9",
     "team": "OB",
     "points": 5
   },
   {
-    "pos": "9",
+    "pos": "10",
     "team": "Silkeborg IF",
     "points": 5
-  },
-  {
-    "pos": "10",
-    "team": "Lyngby Boldklub",
-    "points": 3
   },
   {
     "pos": "11",
