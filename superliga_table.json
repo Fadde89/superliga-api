@@ -2,7 +2,7 @@
   {
     "pos": "1",
     "team": "F.C. København",
-    "points": 21
+    "points": 24
   },
   {
     "pos": "2",
@@ -11,13 +11,13 @@
   },
   {
     "pos": "3",
-    "team": "FC Nordsjælland",
+    "team": "Viborg FF",
     "points": 17
   },
   {
     "pos": "4",
-    "team": "Viborg FF",
-    "points": 14
+    "team": "FC Nordsjælland",
+    "points": 17
   },
   {
     "pos": "5",
@@ -26,12 +26,12 @@
   },
   {
     "pos": "6",
-    "team": "Silkeborg IF",
-    "points": 10
+    "team": "AC Horsens",
+    "points": 11
   },
   {
     "pos": "7",
-    "team": "AC Horsens",
+    "team": "Silkeborg IF",
     "points": 10
   },
   {
@@ -52,11 +52,11 @@
   {
     "pos": "11",
     "team": "AGF",
-    "points": 4
+    "points": 5
   },
   {
     "pos": "12",
     "team": "Sønderjyske",
-    "points": 2
+    "points": 5
   }
 ]
